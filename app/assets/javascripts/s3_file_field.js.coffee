@@ -62,18 +62,18 @@ jQuery.fn.S3FileField = (options) ->
       data.files[0].unique_id = Math.random().toString(36).substr(2,16)
       if add? then add(e, data) else data.submit()
 
+    progressall: (e, data) ->
+      progressall(e, data) if progressall?
+
+    processalways: (e, data) ->
+      processalways(e, data) if processalways?
+
     done: (e, data) ->
       data.result = build_content_object data.files[0]
       done(e, data) if done?
 
     fail: (e, data) ->
       fail(e, data) if fail?
-
-	progressall: (e, data) ->
-      progressall(e, data) if progressall?
-
-	processalways: (e, data) ->
-      processalways(e, data) if processalways?
 
     formData: (form) ->
       unique_id = @files[0].unique_id
