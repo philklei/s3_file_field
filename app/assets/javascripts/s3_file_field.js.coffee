@@ -34,6 +34,8 @@ jQuery.fn.S3FileField = (options) ->
   add = extractOption('add')
   done = extractOption('done')
   fail = extractOption('fail')
+  processalways = extractOption('processalways')
+  progressall = extractOption('progressall')
   extraFormData = extractOption('formData')
 
   delete options['paramName']
