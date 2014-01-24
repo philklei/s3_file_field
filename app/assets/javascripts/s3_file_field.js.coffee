@@ -69,6 +69,12 @@ jQuery.fn.S3FileField = (options) ->
     fail: (e, data) ->
       fail(e, data) if fail?
 
+	progressall: (e, data) ->
+      progressall(e, data) if progressall?
+
+	processalways: (e, data) ->
+      processalways(e, data) if processalways?
+
     formData: (form) ->
       unique_id = @files[0].unique_id
       finalFormData[unique_id] =
